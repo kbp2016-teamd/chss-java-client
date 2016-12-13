@@ -13,11 +13,6 @@ public class Evaluation {
 	private Answer answer = null;
 	
 	private Result result = null;
-	
-	public Evaluation()
-	{
-		
-	}
 
 	public Result sendEvaluationAnswers(EvaluationAnswers evaluationAnswers)
 	{

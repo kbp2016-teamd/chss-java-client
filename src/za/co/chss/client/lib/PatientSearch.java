@@ -1,5 +1,6 @@
 package za.co.chss.client.lib;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import za.co.chss.client.entities.Area;
@@ -8,9 +9,9 @@ import za.co.chss.client.entities.Vitals;
 
 public class PatientSearch {
 	
-	private List<Patient> listOfPatientsArea = null;
+	private ArrayList<Patient> listOfPatientsArea = new ArrayList<>();
 	
-	public List<Patient> getListOfPatients(Area area)
+	public ArrayList<Patient> getListOfPatients(Area area)
 	{
 		Vitals v1 = new Vitals("10", "10", "10", "10", "10", "10", "10");
 		Patient p1 = new Patient("Patient1","P1Surname" , "1234567890123", "Male", 31 , "1985/01/01 ", "0812345678", "add1", "add2", v1);
