@@ -1,5 +1,5 @@
 package za.co.chss.client.lib;
 
-public abstract class EvaluationAnswers {
+public class EvaluationAnswers {
 
 }
