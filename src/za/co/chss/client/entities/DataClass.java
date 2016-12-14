@@ -17,7 +17,8 @@ public class DataClass {
 		asyncParameters.requestType = AsyncParameters.REQUEST_TYPE_GET;
 		asyncParameters.url = "patients/area";
 		ArrayList<Patient> patients = new ArrayList<>();
-		Patient patient = new Patient("","","","",0,"","","","");
+		Site site = new Site("Area1");
+		Patient patient = new Patient("","","","",0,"","",site);
 		
 		DownloadDataTask downloadData = new DownloadDataTask();
 
