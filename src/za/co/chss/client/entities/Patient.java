@@ -11,9 +11,8 @@ public class Patient
 	private String cellphone;
 	private String addressLine1;
 	private String addressLine2;
-	private Vitals vitals;
 		
-	public Patient(String name, String surname, String idNumber, String gender, int age, String dob, String cellphone, String addressLine1, String addressLine2, Vitals vitals) {
+	public Patient(String name, String surname, String idNumber, String gender, int age, String dob, String cellphone, String addressLine1, String addressLine2) {
 		this.name = name;
 		this.surname = surname;
 		this.idNumber = idNumber;
@@ -23,7 +22,6 @@ public class Patient
 		this.cellphone = cellphone;
 		this.addressLine1 = addressLine1;
 		this.addressLine2 = addressLine2;
-		this.vitals = vitals;
 	}
 
 	public String getName() {
