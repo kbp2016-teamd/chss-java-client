@@ -9,10 +9,9 @@ public class Patient
 	private int age;
 	private String dob;
 	private String cellphone;
-	private String addressLine1;
-	private String addressLine2;
+	private Site site;
 		
-	public Patient(String name, String surname, String idNumber, String gender, int age, String dob, String cellphone, String addressLine1, String addressLine2) {
+	public Patient(String name, String surname, String idNumber, String gender, int age, String dob, String cellphone, Site site) {
 		this.name = name;
 		this.surname = surname;
 		this.idNumber = idNumber;
@@ -20,8 +19,7 @@ public class Patient
 		this.age = age;
 		this.dob = dob;
 		this.cellphone = cellphone;
-		this.addressLine1 = addressLine1;
-		this.addressLine2 = addressLine2;
+		this.site = site;
 	}
 
 	public String getName() {
@@ -39,12 +37,20 @@ public class Patient
 	public String getCellphone() {
 		return cellphone;
 	}
-
-	public String getAddressLine1() {
-		return addressLine1;
+	
+	public String getGender() {
+		return gender;
 	}
 
-	public String getAddressLine2() {
-		return addressLine2;
+	public int getAge() {
+		return age;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public Site getSite() {
+		return site;
 	}
 }
