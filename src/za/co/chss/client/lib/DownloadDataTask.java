@@ -18,7 +18,7 @@ public class DownloadDataTask
 	private String newLine; //Creates new line in StringBuffer after writing each line of data
 	/*stores server responses as an Arraylist to accommodate the case of more that one parameter needing to be processed*/
 	private String result = null;
-	private final String HOST_ADDRESS = "http://146.141.180.14/api/lrc/"; //The base url for all server calls
+	private final String HOST_ADDRESS = "http://apichss.azurewebsites.net/api/"; //The base url for all server calls
 	private BufferedReader httpStreamInputReader; /*Reader that will be used to extract the data from the server response*/
 	int code;
 	StringBuffer httpContent;

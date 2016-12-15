@@ -1,9 +1,16 @@
 package za.co.chss.client.entities;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
+
+import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+
+import com.google.gson.Gson;
 
 import za.co.chss.client.lib.DownloadDataTask;
 
@@ -11,15 +18,15 @@ public class DataClass {
 	public static final String EMPTY_STRING = "";
 	public static final String VALUE = "Value";
 	public static final String ID = "ID";
+	private static Gson jsonResult = null;
+	private static ObjectMapper mapper = null;
 	
 	public static ArrayList<Patient> getAllCount(Area area) {
 		AsyncParameters asyncParameters = new AsyncParameters();
 		asyncParameters.requestType = AsyncParameters.REQUEST_TYPE_GET;
-		asyncParameters.url = "patients/area";
+		asyncParameters.url = "patient/";
 		ArrayList<Patient> patients = new ArrayList<>();
-		Site site = new Site("Area1");
-		Patient patient = new Patient("","","","",0,"","",site);
-		
+
 		DownloadDataTask downloadData = new DownloadDataTask();
 
 		try {
@@ -33,9 +40,13 @@ public class DataClass {
 		return null;
 	}
 	
-	private static ArrayList<Patient> formatResultToPatientList(String resultString) {
-		// TODO Auto-generated method stub
-		return null;
+	private static ArrayList<Patient> formatResultToPatientList(String resultString) throws JsonParseException, JsonMappingException, IOException {
+		// convert json to Patient List
+	
+		jsonResult = new Gson();
+		mapper = new ObjectMapper();
+		PatientList patientList = mapper.readValue(resultString,PatientList.class);
+		return patientList.getPatients();
 	}
 
 	public static String formatParameters(ArrayList<NameValPair> aParameters, String aRequestType) {
