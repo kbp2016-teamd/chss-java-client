@@ -45,7 +45,7 @@ public class DataClass {
 	
 		jsonResult = new Gson();
 		mapper = new ObjectMapper();
-		PatientList patientList = mapper.readValue(resultString,PatientList.class);
+		PatientList patientList = mapper.readValue(resultString, PatientList.class);
 		return patientList.getPatients();
 	}
 
