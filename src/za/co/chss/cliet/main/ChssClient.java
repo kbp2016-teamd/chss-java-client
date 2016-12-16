@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 
+import za.co.chss.client.entities.EvaluationResponse;
 import za.co.chss.client.entities.Patient;
+import za.co.chss.client.lib.EvaluationAnswers;
 import za.co.chss.client.lib.PatientCreation;
 import za.co.chss.client.lib.PatientSearch;
 
@@ -42,6 +44,11 @@ public class ChssClient {
 		
 		PatientCreation pc = new PatientCreation();
 		pc.createPatient(patient);
+		
+		EvaluationResponse evaluationResponse = new EvaluationResponse();
+		evaluationResponse.setID(0);
+		EvaluationAnswers ea = new EvaluationAnswers();
+		ea.evaluationResponse(evaluationResponse);
 
 	}
 

@@ -24,7 +24,7 @@ public class DataClass {
 	public static void createResponse(EvaluationResponse evaluationResponse) throws JsonGenerationException, JsonMappingException, IOException {
 		AsyncParameters asyncParameters = new AsyncParameters();
 		asyncParameters.requestType = AsyncParameters.REQUEST_TYPE_POST;
-		asyncParameters.url = "response/";
+		asyncParameters.url = "questionnaireresponse/";
 		
 		DownloadDataTask downloadData = new DownloadDataTask();
 	
@@ -40,7 +40,7 @@ public class DataClass {
 		
 	}
 	
-	public static boolean createPatient(Patient patient) throws JsonGenerationException, JsonMappingException, IOException
+	public static void createPatient(Patient patient) throws JsonGenerationException, JsonMappingException, IOException
 	{
 		AsyncParameters asyncParameters = new AsyncParameters();
 		asyncParameters.requestType = AsyncParameters.REQUEST_TYPE_POST;
@@ -63,7 +63,6 @@ public class DataClass {
 		
 		String resultString = downloadData.doInBackground(asyncParameters);
 	
-		return true;
 	}
 	
 	public static ArrayList<Patient> getAllCount() {
