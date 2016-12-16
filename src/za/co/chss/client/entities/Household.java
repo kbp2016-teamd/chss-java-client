@@ -2,40 +2,111 @@ package za.co.chss.client.entities;
 
 public class Household {
 	
-	private int householdID;
+	private Site site;
+	private String name;
+	private String address;
+	private String longitude;
+	private String latitude;
+	private int males;
+	private int females;
+
 	private int siteID;
-	private String dwellingAddress;
-	private int totalNoMales;
-	private int totalNoFemales;
-	
-	public int getHouseholdID() {
-		return householdID;
+	private int id;
+	private String CreatedUser;
+	private String CreatedDate;
+	private String LastModifiedUser;
+	private String LastModifiedDate;
+	public Site getSite() {
+		return site;
+	}
+	public String getName() {
+		return name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public String getLongitude() {
+		return longitude;
+	}
+	public String getLatitude() {
+		return latitude;
+	}
+	public int getMales() {
+		return males;
+	}
+	public int getFemales() {
+		return females;
 	}
 	public int getSiteID() {
 		return siteID;
 	}
-	public String getDwellingAddress() {
-		return dwellingAddress;
+	public int getId() {
+		return id;
 	}
-	public int getTotalNoMales() {
-		return totalNoMales;
+	public String getCreatedUser() {
+		return CreatedUser;
 	}
-	public int getTotalNoFemales() {
-		return totalNoFemales;
+	public String getCreatedDate() {
+		return CreatedDate;
 	}
-	public void setHouseholdID(int householdID) {
-		this.householdID = householdID;
+	public String getLastModifiedUser() {
+		return LastModifiedUser;
+	}
+	public String getLastModifiedDate() {
+		return LastModifiedDate;
+	}
+	public void setSite(Site site) {
+		this.site = site;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
+	}
+	public void setMales(int males) {
+		this.males = males;
+	}
+	public void setFemales(int females) {
+		this.females = females;
 	}
 	public void setSiteID(int siteID) {
 		this.siteID = siteID;
 	}
-	public void setDwellingAddress(String dwellingAddress) {
-		this.dwellingAddress = dwellingAddress;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public void setTotalNoMales(int totalNoMales) {
-		this.totalNoMales = totalNoMales;
+	public void setCreatedUser(String createdUser) {
+		CreatedUser = createdUser;
 	}
-	public void setTotalNoFemales(int totalNoFemales) {
-		this.totalNoFemales = totalNoFemales;
+	public void setCreatedDate(String createdDate) {
+		CreatedDate = createdDate;
 	}
+	public void setLastModifiedUser(String lastModifiedUser) {
+		LastModifiedUser = lastModifiedUser;
+	}
+	public void setLastModifiedDate(String lastModifiedDate) {
+		LastModifiedDate = lastModifiedDate;
+	}
+	
+//    "Name": "Midrand Area",
+//    "Address": "1685 Midrand Road",
+//    "Longitude": null,
+//    "Latitude": null,
+//    "Males": 2,
+//    "Females": 10,
+//    "SiteId": 1,
+//    "Id": 3,
+//    "CreatedUser": null,
+//    "CreatedDate": null,
+//    "LastModifiedUser": null,
+//    "LastModifiedDate": null
+	
+	
 }

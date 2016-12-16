@@ -1,15 +1,21 @@
 package za.co.chss.client.lib;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
+
+import za.co.chss.client.entities.DataClass;
 import za.co.chss.client.entities.Patient;
 
 public class PatientCreation {
 	
-	private Patient patient = null;
-	
-	public boolean createPatient(Patient patient)
+	public void createPatient(Patient patient) throws JsonGenerationException, JsonMappingException, IOException
 	{
-		
-		return true;
+		DataClass.createPatient(patient);
+
 	}
+
 
 }

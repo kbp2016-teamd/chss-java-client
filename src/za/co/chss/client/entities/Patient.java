@@ -2,50 +2,82 @@ package za.co.chss.client.entities;
 
 public class Patient 
 {
-	private int householdID;
-	public int getHouseholdID() {
-		return householdID;
+	public String Id;
+	public String IdNumber;
+	public String FirstName;
+	public String Surname;
+	public String DateOfBirth;
+	public String Gender;
+	public String Height;
+	
+	public String HouseHold;
+	public String Address;
+	public String Ward;
+	public String Recommendation;
+	public String getId() {
+		return Id;
 	}
-	public int getPersonID() {
-		return personID;
+	public String getIdNumber() {
+		return IdNumber;
 	}
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return FirstName;
 	}
 	public String getSurname() {
-		return surname;
+		return Surname;
+	}
+	public String getDateOfBirth() {
+		return DateOfBirth;
 	}
 	public String getGender() {
-		return gender;
+		return Gender;
 	}
-	public int getAge() {
-		return age;
+	public String getHeight() {
+		return Height;
 	}
-	public void setHouseholdID(int householdID) {
-		this.householdID = householdID;
+	public String getHouseHold() {
+		return HouseHold;
 	}
-	public void setPersonID(int personID) {
-		this.personID = personID;
+	public String getAddress() {
+		return Address;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public String getWard() {
+		return Ward;
+	}
+	public String getRecommendation() {
+		return Recommendation;
+	}
+	public void setId(String id) {
+		Id = id;
+	}
+	public void setIdNumber(String idNumber) {
+		IdNumber = idNumber;
+	}
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
 	}
 	public void setSurname(String surname) {
-		this.surname = surname;
+		Surname = surname;
+	}
+	public void setDateOfBirth(String dateOfBirth) {
+		DateOfBirth = dateOfBirth;
 	}
 	public void setGender(String gender) {
-		this.gender = gender;
+		Gender = gender;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setHeight(String height) {
+		Height = height;
 	}
-	private int personID;
-	private String name;
-	private String surname;
-	private String gender;
-	private int age;
-		
-
-
-
+	public void setHouseHold(String houseHold) {
+		HouseHold = houseHold;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	public void setWard(String ward) {
+		Ward = ward;
+	}
+	public void setRecommendation(String recommendation) {
+		Recommendation = recommendation;
+	}
 }
